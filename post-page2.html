@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advices</title>
+    <style>
+        .customers {
+            height: 520px;
+            border-radius: 10px;
+            background-color: #8EB0C5;
+        }
+
+        .customers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .customers-container .box {
+            padding: 20px;
+            box-shadow: gray;
+            border-radius: 1rem;
+            text-align: center;
+            background: #558BAA;
+            height: fit-content;
+        }
+
+        .customers .heading h2 {
+            padding-top: 23px;
+        }
+
+        .heading h2 {
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        .customers-container .box h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0.5em 0 0.5em;
+        }
+
+        .customers-container .box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .customers-container .box:hover {
+            background: #799BB1;
+            transition: 0.2s all linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="advices">
+        <section class="customers" id="customers">
+            <div class="heading">
+                <h2>Trusted Mental Health Care for All</h2>
+            </div>
+            <div class="customers-container">
+                <div class="box" id="child assesment">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Children-anxiety.jpg.webp"
+                        alt="">
+                    <h2>Child Assesment</h2>
+                </div>
+                <div class="box" id="adult assesment">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Depression.jpg.webp"
+                        alt="">
+                    <h2>Adult Assesment</h2>
+                </div>
+                <div class="box" id="elder assesment">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Dementia-Screening.jpg.webp"
+                        alt="">
+                    <h2>Elder's Assesment</h2>
+                </div>
+                <div class="box" id="other assesment">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Stress.jpg.webp"
+                        alt="">
+                    <h2>Other Assesment</h2>
+                </div>
+                <div class="box" id="child clinic">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/ADHD-children-.jpg.webp"
+                        alt="">
+                    <h2>Child & Adolescent Clinic</h2>
+                </div>
+                <div class="box" id="adult clinic">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Personality-testings.jpg.webp"
+                        alt="">
+                    <h2>Adult Clinic</h2>
+                </div>
+                <div class="box" id="elderly clinic">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Geriatric-Depression-Scale.jpg.webp"
+                        alt="">
+                    <h2>Elderly Clinic</h2>
+                </div>
+                <div class="box" id="other">
+
+                    <img src="https://cdn-jeobj.nitrocdn.com/fCfsXmMtFLNLbLjxJGNUwQISJRAjAIqh/assets/images/optimized/rev-70ac063/psychicare.com/wp-content/uploads/2022/05/Assessment-of-sexuality.jpg.webp"
+                        alt="">
+                    <h2>Others</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Parse the doctor details from the URL query string
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var doctorDetailsString = urlParams.get('doctor');
+            var doctorDetails = JSON.parse(decodeURIComponent(doctorDetailsString));
+
+            // Display the doctor's details on the page
+            var doctorDetailsContainer = document.getElementById('doctorDetails');
+            doctorDetailsContainer.innerHTML = `
+            <div class="doctor-info">
+                <img src="${doctorDetails.image}" alt="${doctorDetails.name}">
+                <div>
+                    <h2>${doctorDetails.name}</h2>
+                    <p>${doctorDetails.specialty}</p>
+                </div>
+            </div>
+            <div class="doctor-details">
+                <h3>Experience:</h3>
+                <p>${doctorDetails.experience}</p>
+                <h3>Education:</h3>
+                <p>${doctorDetails.education}</p>
+                <h3>Expertise:</h3>
+                <p>${doctorDetails.expertise}</p>
+                <div class="time">
+        <h3>Schedule:</h3>
+        <ul>
+            <li><strong>Monday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Tuesday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Wednesday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Thursday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Friday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Saturday:</strong> 10:00 AM - 6:00 PM</li>
+        </ul>
+    </div>
+                <div class="doctor-contact">
+                    <i class="ri-whatsapp-fill"></i>
+                    <i class="ri-video-chat-fill"></i>
+                    <i class="ri-phone-fill"></i>
+                </div>
+            </div>
+        `;
+        });
+
+        const boxes = document.querySelectorAll('.box');
+
+        // Loop through each box and add click event listener
+        boxes.forEach(box => {
+            box.addEventListener('click', function () {
+                // Get the id of the clicked box
+                const boxId = this.id;
+
+                // Redirect to post-page.html with boxId as parameter
+                window.location.href = `post-page.html?id=${boxId}`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

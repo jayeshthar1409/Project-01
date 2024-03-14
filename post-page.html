@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Doctor Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #doctorDetails {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .doctor-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .doctor-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .doctor-info h2 {
+            margin: 0;
+        }
+
+        .doctor-info p {
+            margin: 0;
+        }
+
+        .doctor-details {
+            margin-top: 20px;
+        }
+
+        .doctor-details h3 {
+            margin-top: 0;
+        }
+
+        .doctor-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .doctor-details i {
+            font-size: 24px;
+        }
+
+        .doctor-contact {
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .doctor-contact :hover {
+            transform: scale(1.1);
+        }
+        .products-container {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.products-container .box {
+
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5rem;
+    box-shadow: black;
+}
+
+.products-container img {
+    width: 80%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+    
+    border-radius: 1rem;
+}
+
+.products-container .box h3 {
+    width: 80%;
+    font-size: 1.075rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.products-container .box .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.products-container .box .content span {
+    text-align: center;
+    width: 50%;
+    padding: 5px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #558BAA;
+    border: 15px;
+    
+    border-radius: 2.5px;
+    font-weight: 750;
+}
+
+.products-container .box .content a {
+    width: 25%;
+    text-align: center;
+    padding: 5px;
+    
+    color: #fff;
+    background: #558BAA;
+    border: 20px;
+    border-radius: 2.5px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.products-container .box .content a:hover {
+    background: #8eb0c5;
+    color: white;
+    transition: 0.2s all linear;
+    text-decoration: underline;
+    border: 1.5px solid #41779b;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Our doctors and Specialists</h1>
+    <div id="doctorDetails">
+        <section class="products" id="products">
+            <div class="heading">
+                <h2>Our-doctors </h2>
+            </div>
+            <div class="products-container">
+                <div class="box">
+                    <img src="https://imagesx.practo.com/providers/dr-rajashekar-reddy-neurologist-delhi-e3c484cf-7541-4992-aa92-a2a1c2ced9b7.jpg?i_type=t_100x100-4x"
+                        alt="">
+                    <h3>Dr.Atul Taygi</h3>
+                    <div class="content">
+                        <span>Psychiatrist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUTWTVS71v057PIlKpA6DdJl5ICU8UFp2cQ&usqp=CAU"
+                        alt="">
+                    <h3>Dr.Rishabh Verma</h3>
+                    <div class="content">
+                        <span>Psycologist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMOFUu3IAJ-iw3xPz5mxDs-trzda2YG0kgbg&usqp=CAU"
+                        alt="">
+                    <h3>Dr. Sakshi Anand</h3>
+                    <div class="content">
+                        <span>Neurologist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptE7lRe_QwtK6vaTm1Qt39BMSi4uhOdbIgw&usqp=CAU"
+                        alt="">
+                    <h3>Dr.Abhishek mani</h3>
+                    <div class="content">
+                        <span>Geriatric</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT95evP5ez8BahojSpSzEflHBmpgrHta43Qw&usqp=CAU"
+                        alt="">
+                    <h3>Dr.Puspraj Sahu</h3>
+                    <div class="content">
+                        <span>Pediatric</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBGjSExANR-Gjf_-j0CrX_XKbLr2iieYITA&usqp=CAU"
+                        alt="">
+                    <h3>Dr.Tanish Sarkar</h3>
+                    <div class="content">
+                        <span>Psychotherapist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZbBeI9yYkWvQEB35FExmH3xo5Tp460fKgw&usqp=CAU"
+                        alt="">
+                    <h3>Dr.Daya Shah</h3>
+                    <div class="content">
+                        <span>Therapist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://www.apollocradle.com/wp-content/uploads/2019/01/jasmin-rath.jpg.webp" alt="">
+                    <h3>Dr.Nupur Sharma</h3>
+                    <div class="content">
+                        <span>Neurosyic</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://lh3.googleusercontent.com/proxy/__opnU3hQy-pNljv81ZTE0ZF-KjupHzc6liJPVLqQanvfOQrxpuJguxPEZn2412NpFmWkZU6ugSeuJpOXCeo0u2k2uAqSf2B_FFGKdlS8PRTm2M0QWL-z4V3vWHxXsP9lBCutyUnLg"
+                        alt="">
+                    <h3>Dr.Ashok Dewasi</h3>
+                    <div class="content">
+                        <span>Pediatric</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://www.jpnatc.org/it/img/Gallery/faculty/narenderchoudhary.jpg" alt="">
+                    <h3>Dr.Pravin Desai</h3>
+                    <div class="content">
+                        <span>Psychotherapist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://www.woodlandshospital.in/images/doctor-img/Semanti-Chakrabarty-New.jpg" alt="">
+                    <h3>Dr.Radha Parekh</h3>
+                    <div class="content">
+                        <span>Therapist</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://assets.lybrate.com/img/documents/doctor/dp/a5bc50317af63db022ddbfb1178e5c3e/Endocrinology-AnjanaBhan-Delhi-54cb89.jpg"
+                        alt="">
+                    <h3>Dr.Sawati Mishra</h3>
+                    <div class="content">
+                        <span>Neurosyic</span>
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Parse the doctor details from the URL query string
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var doctorDetailsString = urlParams.get('doctor');
+            var doctorDetails = JSON.parse(decodeURIComponent(doctorDetailsString));
+
+            // Display the doctor's details on the page
+            var doctorDetailsContainer = document.getElementById('doctorDetails');
+            doctorDetailsContainer.innerHTML = `
+                <div class="doctor-info">
+                    <img src="${doctorDetails.image}" alt="${doctorDetails.name}">
+                    <div>
+                        <h2>${doctorDetails.name}</h2>
+                        <p>${doctorDetails.specialty}</p>
+                    </div>
+                </div>
+                <div class="doctor-details">
+                    <h3>Experience:</h3>
+                    <p>${doctorDetails.experience}</p>
+                    <h3>Education:</h3>
+                    <p>${doctorDetails.education}</p>
+                    <h3>Expertise:</h3>
+                    <p>${doctorDetails.expertise}</p>
+                    <div class="time">
+        <h3>Schedule:</h3>
+        <ul>
+            <li><strong>Monday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Tuesday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Wednesday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Thursday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Friday:</strong> 10:00 AM - 6:00 PM</li>
+            <li><strong>Saturday:</strong> 10:00 AM - 6:00 PM</li>
+        </ul>
+    </div>
+                    <div class= "doctor-contact">
+                        <i class="ri-whatsapp-fill"></i>
+                    <i class="ri-video-chat-fill"></i>
+                    <i class="ri-phone-fill"></i>
+                        </div>
+                </div>
+
+            `;
+        });
+        const boxes = document.querySelectorAll('.box');
+
+        // Loop through each box and add click event listener
+        boxes.forEach(box => {
+            box.addEventListener('click', function () {
+                // Get the id of the clicked box
+                const boxId = this.id;
+
+                // Redirect to post-page.html with boxId as parameter
+                window.location.href = `post-page.html?id=${boxId}`;
+            });
+        });
+    </script>
+</body>
+
+</html>

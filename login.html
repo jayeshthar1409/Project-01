@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#main{
+    margin-left: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+    width: 60vw;
+    /* height: 50vh; */
+}
+
+.glassmorphism-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-geometric-white-texture-background-d-illustration-119215102.jpg);
+    object-fit: fill;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#glassmorphism-form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+/* #glassmorphism-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+} */
+
+    #main{
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+        border: 1px solid rgba(255, 255, 255, 0.3);    
+    }
+
+#glassmorphism-form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #333;
+    font-family: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group textarea:hover {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #459fc9;
+    border-radius: 5px;
+    transition: 1s;
+    box-shadow: #459fc9;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-right: 15px;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.login-button,
+.reset-button {
+    padding: 17px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.login-button {
+    background-color: #459fc9;
+    color: white;
+}
+
+.reset-button {
+    background-color: #616161;
+    color: white;
+}
+
+.login-button:hover,
+.reset-button:hover {
+    background-color: #3588c3;
+}
+.login-button, .reset-button {
+    font-weight: bold;
+}
+
+
+#part-two{
+    margin-left: 50px;
+    width: 300px;
+}
+
+/* -----Responsive----- */
+@media screen and (max-width: 768px) {
+    form{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #part-two{
+        margin-left: 0;
+    }
+
+    .login-button,
+    .reset-button {
+        display: inline;
+        padding: 10px 30px;
+        margin: 7px;
+        border: none;
+        border-radius: 5px;
+       
+    }
+
+   
+}
+@media screen and (max-width: 505px) {
+    #part-two {
+        width: 200px;
+        padding: 10px;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>LOGIN</h1>
+    <form action="post" class="glassmorphism-form">
+
+      <div id="part-one">
+        <div class="form-group">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" placeholder="First Name">
+        </div>
+  
+        <div class="form-group">
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        </div>
+        
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" placeholder="Age">
+        </div>
+  
+        <div class="form-group radio-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Username">
+        </div>
+      </div>
+
+      <div class="seperation"></div>
+
+     <div id="part-two">
+     
+
+      <div class="form-group">
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="text" id="mobile-number" name="mobile-number" placeholder="Mobile Number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </div>
+
+      
+      <div class="form-group">
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea>
+      </div>
+
+     </div>   
+     
+    </form>
+   
+
+    <div class="button-container">
+      <button type="submit" class="login-button">Login</button>
+      <button type="reset" class="reset-button">Reset</button>
+    </div>
+  </div>
+</body>
+</html>
